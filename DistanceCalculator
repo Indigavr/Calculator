@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class DistanceCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Введіть швидкість (км/год): ");
+            var speed = scanner.nextDouble();
+
+            if(speed == 0) {
+                System.out.println("Програма завершена.");
+                 break;
+            }
+
+            System.out.println("Введіть час подорожі (год): ");
+            var time = scanner.nextDouble();
+
+            var distance = speed * time;
+
+            System.out.println("Відстань, що буде пройдена: " + distance + " км");
+        }
+
+    }
+}
